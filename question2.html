@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="card" class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="progress progress-striped active" style="margin:5%">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 20%;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+            </div>
+            <div id="question">
+                <h3>
+                    教育立法
+                </h3>
+                <div class="carousel slide" id="carousel-741138">
+                    <ol class="carousel-indicators">
+                        <li data-slide-to="0" data-target="#carousel-741138">
+                        </li>
+                        <li data-slide-to="1" data-target="#carousel-741138">
+                        </li>
+                        <li data-slide-to="2" data-target="#carousel-741138">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="" src="pictures/恢复高考.jpg"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    恢复高考
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="pictures/高考2.jpg"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    高考完后的同学们
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="pictures/高考3.jpg"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    毛坦厂中学高考场景
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-741138" data-slide="prev"><span
+                            class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
+                                                                                    href="#carousel-741138"
+                                                                                    data-slide="next"><span
+                        class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                <p><strong>40年的教育发展是跨越性的。</strong><br/>高考制度的恢复，使中国的人才培养重新步入了健康发展的轨道。据了解，恢复高考后的二十多年里，中国已经有1000多万名普通高校的本专科毕业生和近60万名研究生陆续走上工作岗位。1977年恢复高考制度，不仅改变了几代人的命运，尤为重要的是为我国在新时期及其后的发展和腾飞奠定了良好的基础。</p>
+                <p><strong>40年的教育发展是全方面的。</strong><br/>从硬件到软件、从内容到方法、从传统管理到现代治理等，教育各种要素水平越来越高。1995年教育法规定教育经费投入“三个增长”，2012年实现4%目标并保持连续增长，2017年国家财政性教育经费支出达3.4万亿元。1978年，全国各级各类学校专任教师899万人，2017年增加到1623万人，是1978年的1.8倍，一支高素质专业化的教师队伍初具规模。目前，我国已形成以8部教育法律为统领、包括16部教育法规和一批部门规章、地方教育法规规章在内的比较完备的教育法律体系，为教育发展提供了法治保障。</p>
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                <p>问题二：______年《中华人民共和国义务教育法》颁布并实施，让学生上学学知识成为国家法律规定，不因为其他原因而使学生辍学。</p>
+
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked> 1986
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">1988
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">1990
+                            </label>
+                        </div>
+                    </div>
+                </div></div></div>
+                <button type="button" class="btn btn-default">提交答案</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // localStorage.counter = 0;
+    console.log(localStorage.counter)
+    $("button").click(function () {
+        var radioValue = $('input:radio[name="optionsRadios"]:checked').val();
+        console.log(radioValue)
+        if (radioValue === '1') {
+            localStorage.counter=parseInt(localStorage.counter)+1;
+            console.log(localStorage.counter)
+            alert("回答正确，答案为：1986")
+        }else{
+            alert("回答错误，正确答案为：1986")
+        }
+        $("body").fadeToggle(700);
+        setTimeout(function(){$(location).attr('href', 'question3.html')},700)
+    })
+
+
+</script>
+</body>
+<style>
+    #question {
+        padding: 0 20px 20px;
+        border-radius: 8px;
+        overflow-y: hidden;
+        height: 100%;
+        margin: 24px 12px 12px;
+        box-shadow: 0 0 10px rgba(39, 151, 255, .25);
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    body {
+        background: #e0f0ff;
+        height: 100%;
+        font-size: 20px;
+    }
+
+    /*#card {*/
+    /*!*height: 900px;*!*/
+    /*height: 0px;*/
+    /*padding-bottom: 100%*/
+    /*}*/
+
+    /*.row {*/
+    /*margin-bottom: -99999px;*/
+    /*overflow: hidden;*/
+    /*padding-bottom: 99999px;*/
+    /*}*/
+</style>
+<script>
+    $(document).ready(function(){
+        $(".carousel").carousel({
+            interval: 3000
+        })
+    });
+
+</script>
+</html>

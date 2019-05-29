@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="card" class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="progress progress-striped active" style="margin:5%">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 40%;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+            </div>
+            <div id="question">
+                <h3>
+                    教育促进科技
+                </h3>
+                <p>
+                    视频资料：孔子学院
+                </p>
+                <iframe src='http://player.youku.com/embed/XODA0NjU0NTg4' frameborder=0 style="width:100%;border-radius: 5px"></iframe>
+                <p>改革使科技发展迎来了春天。从“科学技术是第一生产力”到“创新是引领发展的第一动力”，从实施科教兴国、人才强国战略到深入实施创新驱动发展战略，从增强自主创新能力到建设创新型国家，科技改革成为改革开放大战略的一个缩影，发挥了先锋、引领和试验田作用。40年来，我国科技发展日新月异，科技实力伴随经济发展同步壮大，为我国综合国力的提升提供了重要支撑。特别是党的十八大以来，创新驱动发展战略全面实施，科技体制机制改革进一步深化，研发投入持续增加，创新活力竞相迸发，重大成果不断涌现，体系建设逐步完善。我国科技步入快速发展轨道，成为具有全球影响力的科技创新大国。
+                    <br/>栉风沐雨40载，在这条前行的路上：有“天眼巨匠”南怀东为FAST奔波选址，用双脚丈量每个角落的执着坚韧；有举国体制下研制“中国神药”青蒿素类抗疟药的协同攻关；有“神舟”飞天创造的“中国高度”，“蛟龙”海潜成就的“中国深度”，“和谐号”“复兴号”标准动车组刷新的“中国速度”，更有许许多多科技工作者数十年如一日的默默坚守与勤奋耕耘。
+                    <br/>让我们沿着时间的脚步一一回首：
+                </p>
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                        <p>问题四：1975年5月北京大学汉字信息处理研究室，由汉字激光照排系统之父______教授等主持工作，综合运用精深的数学、计算机等多学科知识，历经15个寒暑，研制开发成功“华光激光照排系统”，为世界上最浩繁的文字──汉字告别铅字印刷开辟了通畅大道。引起当代世界印刷界的惊叹，被誉为中国印刷技术的再次革命。</p>
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked> 王永民
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">王选
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">王琛
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="4">王学军
+                            </label>
+                        </div>
+                    </div>
+                </div></div></div>
+                <button type="button" class="btn btn-default">提交答案</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // localStorage.counter = 0;
+    console.log(localStorage.counter)
+    $("button").click(function () {
+        var radioValue = $('input:radio[name="optionsRadios"]:checked').val();
+        console.log(radioValue)
+        if (radioValue === '2') {
+            localStorage.counter=parseInt(localStorage.counter)+1;
+            console.log(localStorage.counter)
+            alert("回答正确，答案为：王选")
+        }else{
+            alert("回答错误，正确答案为：王选")
+        }
+        $("body").fadeToggle(700);
+        setTimeout(function(){$(location).attr('href', 'question5.html')},700)
+    })
+</script>
+</body>
+<style>
+    #question {
+        padding: 0 20px 20px;
+        border-radius: 8px;
+        overflow-y: hidden;
+        height: 100%;
+        margin: 24px 12px 12px;
+        box-shadow: 0 0 10px rgba(39, 151, 255, .25);
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    body {
+        background: #e0f0ff;
+        height: 100%;
+        font-size: 20px;
+    }
+
+    /*#card {*/
+    /*!*height: 900px;*!*/
+    /*height: 0px;*/
+    /*padding-bottom: 100%*/
+    /*}*/
+
+    /*.row {*/
+    /*margin-bottom: -99999px;*/
+    /*overflow: hidden;*/
+    /*padding-bottom: 99999px;*/
+    /*}*/
+</style>
+</html>

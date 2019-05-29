@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div style="text-align: center" id="question">
+                <h3>
+                    恭喜你，闯关完成！
+                </h3>
+                <p>你的分数为</p>
+                <p style="font-size: 50px" id="score">?</p>
+                <img id="modal" style="text-align: center; height: 120px;margin-bottom: 20px" src="pictures/恢复高考.jpg">
+                <!--<img src="pictures/xjpmanhua.png"/>-->
+                <div>
+                    <p>一路闯关后，相信大家对我国的教育和科技变化有了更深的理解。</p>
+                    <p><em>让我们遵循以习近平总书记为核心的<br/>党中央教育和科技发展的战略部署，<br/>坚定落实创新驱动发展战略，<br/>戮力同行，奋勇向前，<br/>为建成创新型国家<br/>和世界科技强国教育强国的<br/>宏伟目标而不懈努力。</em>
+                    </p>
+                </div>
+                <button type="button" id="mybutton" class="btn btn-default btn-block btn-warning"
+                        style="margin: 20px 0 0 0">重新开始
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="row clearfix well well-sm">
+        <div class="col-md-12 column" style="text-align: center">
+            <a id="modal-35803" href="#modal-container-35803" role="button" class="btn" data-toggle="modal">
+                <img src="pictures/TJU_Logo,_a_logo_for_Tianjin_University.png"
+                     style="height: 40px;margin-bottom: 10px">
+                <p>
+                    天津大学智算学部春熙实践队制作 2019年5月
+                </p>
+            </a>
+
+            <div class="modal fade" id="modal-container-35803" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">
+                                联系我们
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>天津大学智算学部春熙实践队制作 2019年5月</p>
+                            <table class="table table-bordered" style="text-align: center">
+                                <caption style="text-align: center">成员介绍</caption>
+                                <thead style="text-align: center">
+                                <tr>
+                                    <th style="text-align: center">名称</th>
+                                    <th style="text-align: center">学号</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>何书豪</td>
+                                    <td>3016204310</td>
+
+                                </tr>
+                                <tr>
+                                    <td>马 力</td>
+                                    <td>3016218150</td>
+
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <!--<p>何书豪He Shuhao</p>-->
+                            <!--<p>马 力Ma Li</p>-->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <!--<button type="button" class="btn btn-primary">保存</button>-->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        var score = localStorage.counter
+        $("#score").text(score);
+        if (score > 8) {
+            $("#modal").attr("src", "pictures/iconfinder_Metal-gold-red_70644.png")
+        } else if (score > 6) {
+            $("#modal").attr("src", "pictures/iconfinder_Metal-silver-red_70647.png")
+        } else {
+            $("#modal").attr("src", "pictures/iconfinder_Metal-bronze-red_70641.png")
+        }
+        localStorage.counter = Number(0);
+        $("#mybutton").click(function () {
+            $("body").fadeToggle(700);
+            setTimeout(function () {
+                $(location).attr('href', 'index.html')
+            }, 700)
+        })
+    });
+</script>
+<style>
+    #question {
+        padding: 0 20px 20px;
+        border-radius: 8px;
+        overflow-y: hidden;
+        height: 100%;
+        margin: 24px 12px 12px;
+        box-shadow: 0 0 10px rgba(39, 151, 255, .25);
+        background-color: rgb(255, 255, 255);
+    }
+
+    body {
+        background: #e0f0ff;
+    }
+</style>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="card" class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="progress progress-striped active" style="margin:5%">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 90%;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+            </div>
+            <div id="question">
+                <h3>
+                    教育促进科技
+                </h3>
+                <p>
+                <table class="table table-condensed", style="font-size: 12px">
+                    <caption>"超算"小知识</caption>
+                    <thead>
+                    <tr>
+                        <th>名称</th>
+                        <th>机型</th>
+                        <th>单位</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>天津中心<br/>2009</td>
+                        <td>天河一号</td>
+                        <td>国防科技大学<br/>滨海新区政府<br/>天津经济技术开发区管委会</td>
+                    </tr>
+                    <tr>
+                        <td>长沙中心<br/>2011</td>
+                        <td>天河一号</td>
+                        <td>国防科技大学<br/>湖南大学<br/>湖南省政府</td>
+                    </tr>
+                    <tr>
+                        <td>深圳中心<br/>2009</td>
+                        <td>曙光星云</td>
+                        <td>中科院计算所<br/>曙光公司<br/>深圳市政府</td>
+                    </tr>
+                    <tr>
+                        <td>济南中心<br/>2011</td>
+                        <td>神威蓝光</td>
+                        <td>山东省科学院<br/>山东省计算中心</td>
+                    </tr>
+                    <tr>
+                        <td>广州中心<br/>2013</td>
+                        <td>天河二号</td>
+                        <td>国防科技大学<br/>中山大学<br/>广州市政府<br/>广东省政府</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="carousel slide" id="carousel-741138">
+                    <ol class="carousel-indicators">
+                        <li data-slide-to="0" data-target="#carousel-741138">
+                        </li>
+                        <li data-slide-to="1" data-target="#carousel-741138">
+                        </li>
+                        <li data-slide-to="2" data-target="#carousel-741138">
+                        </li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="" src="pictures/神威太湖之光.jpg"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    神威太湖之光
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="pictures/天河二号.jpg"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    天河二号
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img alt="" src="pictures/天河三号.jpg"/>
+                            <div class="carousel-caption">
+                                <h4>
+                                    天河三号
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#carousel-741138" data-slide="prev"><span
+                            class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
+                                                                                    href="#carousel-741138"
+                                                                                    data-slide="next"><span
+                        class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
+                </p>
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                        <p>问题九： 2014年12月14日，嫦娥三号着陆月球虹湾区域。15日，嫦娥三号着陆器和巡视器“玉兔”号月球车互拍成像。我国探月工程第二步战略目标圆满完成，成为世界上第______个月球软着陆和巡视探测的国家。</p>
+                        <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked> 一
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">二
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">三
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="4">四
+                            </label>
+                        </div>
+                    </div>
+                </div></div></div>
+                <button type="button" class="btn btn-default">提交答案</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // localStorage.counter = 0;
+    console.log(localStorage.counter)
+    $("button").click(function () {
+        var radioValue = $('input:radio[name="optionsRadios"]:checked').val();
+        console.log(radioValue)
+        if (radioValue === '3') {
+            localStorage.counter=parseInt(localStorage.counter)+1;
+            console.log(localStorage.counter)
+            alert("回答正确，答案为：三")
+        }else{
+            alert("回答错误，正确答案为：三")
+        }
+        $("body").fadeToggle(700);
+        setTimeout(function(){$(location).attr('href', 'question10.html')},700)
+    })
+</script>
+</body>
+<style>
+    #question {
+        padding: 0 20px 20px;
+        border-radius: 8px;
+        overflow-y: hidden;
+        height: 100%;
+        margin: 24px 12px 12px;
+        box-shadow: 0 0 10px rgba(39, 151, 255, .25);
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    body {
+        background: #e0f0ff;
+        height: 100%;
+        font-size: 20px;
+    }
+
+    /*#card {*/
+    /*!*height: 900px;*!*/
+    /*height: 0px;*/
+    /*padding-bottom: 100%*/
+    /*}*/
+
+    /*.row {*/
+    /*margin-bottom: -99999px;*/
+    /*overflow: hidden;*/
+    /*padding-bottom: 99999px;*/
+    /*}*/
+</style>
+<script>
+    $(document).ready(function(){
+        $(".carousel").carousel({
+            interval: 3000
+        })
+    });
+</script>
+</html>

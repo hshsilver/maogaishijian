@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0，user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div id="card" class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="progress progress-striped active" style="margin:5%">
+                <div class="progress-bar progress-bar-success" role="progressbar"
+                     aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                     style="width: 30%;">
+                    <span class="sr-only">40% 完成</span>
+                </div>
+            </div>
+            <div id="question">
+                <h3>
+                    不断发展，走向世界
+                </h3>
+                <p>1978年，我国小学升入初中比例只有60.5%，高校在校生85.6万人，研究生1万人。在极为薄弱的底子上，经过40年努力，目前我国各级各类学校51.4万所，在校生2.7亿人，教育规模位居世界首位。学前教育三年毛入园率从10.6%提升到79.6%，小学学龄儿童净入学率从94%提升到99.9%，初中阶段毛入学率从66.4%提升到103.5%，高中阶段毛入学率从33.6%提升到88.3%，高等教育毛入学率从2.7%提升到45.7%，均达到或超过中高收入国家平均水平。我国用短短20多年时间走过了西方国家近百年的义务教育普及之路，速度超过一些发达国家。
+                    <br/><strong>40年的发展是世界性的。</strong><br/>40年来，教育对外开放呈现出国留学与学成归国同步扩大、来华留学与攻读学位同步增长、“引进来”与“走出去”同步提高的局面。来华留学规模从1978年的1200余人增加到2017年的48万余人，我国成为亚洲最大的留学目的地国。中外合作办学机构和项目达2385个，与180多个国家和地区建立了教育合作关系，建立了8个高级别人文交流机制。533所孔子学院和1140个中小学孔子课堂遍布全球150个国家和地区，海外学习使用汉语人数达1亿人。
+                </p>
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                <p>问题三：2004年11月21日，全球第一所孔子学院在______正式揭牌，中国对外汉语教学领导小组办公室（简称汉办）通过中外合作的方式，初步计划将在全球开办100所孔子学院。</p>
+
+                <div style="background: rgba(80,170,255,0.39);border-radius: 5px">
+                    <div style="margin: 10px;padding:10px">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked> 美国纽约
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="2">英国伦敦
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="3">韩国首尔
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="4">日本东京
+                            </label>
+                        </div>
+                    </div>
+                </div></div></div>
+                <button type="button" class="btn btn-default">提交答案</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    // localStorage.counter = 0;
+    console.log(localStorage.counter)
+    $("button").click(function () {
+        var radioValue = $('input:radio[name="optionsRadios"]:checked').val();
+        console.log(radioValue)
+        if (radioValue === '3') {
+            localStorage.counter=parseInt(localStorage.counter)+1;
+            console.log(localStorage.counter)
+            alert("回答正确，答案为：韩国首尔")
+        }else{
+            alert("回答错误，正确答案为：韩国首尔")
+        }
+        $("body").fadeToggle(700);
+        setTimeout(function(){$(location).attr('href', 'question4.html')},700)
+    })
+</script>
+</body>
+<style>
+    #question {
+        padding: 0 20px 20px;
+        border-radius: 8px;
+        overflow-y: hidden;
+        height: 100%;
+        margin: 24px 12px 12px;
+        box-shadow: 0 0 10px rgba(39, 151, 255, .25);
+        background-color: rgb(255, 255, 255);
+
+    }
+
+    body {
+        background: #e0f0ff;
+        height: 100%;
+        font-size: 20px;
+    }
+
+    /*#card {*/
+    /*!*height: 900px;*!*/
+    /*height: 0px;*/
+    /*padding-bottom: 100%*/
+    /*}*/
+
+    /*.row {*/
+    /*margin-bottom: -99999px;*/
+    /*overflow: hidden;*/
+    /*padding-bottom: 99999px;*/
+    /*}*/
+</style>
+
+</html>
